@@ -61,7 +61,7 @@
                             <span>Ver más</span>
                         </div>
                     </a>
-                    <a href="#" class="module">
+                    <a href="otros-recursos.html" class="module">
                         <div class="module_img">
                             <div class="module_toast">
                                 Tienes una <br>notificación
@@ -98,6 +98,29 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </section>
+        <section class="etapa">
+            <div class="contenedor">
+
+                <div class="etapas">
+                    <p>Etapas de<br><b>tu proceso</b></p>
+                    <div class="timeline time1">
+                        <div class="timeline_bg"></div>
+                        <div class="dot transparent"></div>
+                        <div class="dot" data-n="1"></div>
+                        <div class="dot" data-n="2"></div>
+                        <div class="dot" data-n="3"></div>
+                        <div class="dot" data-n="4"></div>
+                        <div class="dot" data-n="5"></div>
+                        <div class="dot" data-n="6"></div>
+
+                        <div class="timeline_toast">
+                            
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -150,6 +173,70 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let dots = Array.from(document.querySelectorAll('.dot:not(.transparent)')),
+            timeline = document.querySelector('.timeline');
+            timelineToast = document.querySelector('.timeline_toast');
+
+        dots.forEach(dot=>{
+            dot.addEventListener('click', (e)=>{
+                let n = parseInt(e.currentTarget.getAttribute('data-n'))
+                toast(n)
+                timeline.className = `timeline time${n}`
+            })
+        })
+
+        function toast(n){
+            if(n==1){
+                timelineToast.innerHTML = `
+                    <span>Proceso inicial</span>
+                    <div class="grid">
+                        <div>
+                            <small>Visualización<br>del video inicial</small>
+                        </div>
+                        <div>
+                            <small>Definición de<br>objetivos</small>
+                        </div>
+                        <div>
+                            <small>Configuración<br>de procesos</small>
+                        </div>
+                        <div>
+                            <small>Encuesta<br>inicial</small>
+                        </div>    
+                    </div>
+                `;
+            }else if(n==2){
+                timelineToast.innerHTML = `
+                    <p>Nivel Max</p>
+                    <img src="img/key.png">
+                `;
+            }else if(n==3){
+                timelineToast.innerHTML = `
+                    <p>Nivel Pro</p>
+                    <img src="img/key.png">
+                `;
+            }else if(n==4){
+                timelineToast.innerHTML = `
+                    <p>Nivel Plus</p>
+                    <img src="img/key.png">
+                `;
+            }else if(n==5){
+                timelineToast.innerHTML = `
+                    <p>Nivel Master</p>
+                    <img src="img/key.png">
+                `;
+            }else if(n==6){
+                timelineToast.innerHTML = `
+                    <p class="center">Estás en etapa<br>de mantenimiento</p>
+                    <img src="img/key.png">
+                `;
+            }
+
+            timelineToast.className = `timeline_toast toast${n}`
+        }
+        window.onpaint = toast(1);
+    </script>
 
 </body>
 </html>

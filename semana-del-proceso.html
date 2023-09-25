@@ -32,65 +32,67 @@
     </header>
 
     <main>
-        <section class="planning mb_section">
+        <section class="config_process mb_section">
             <div class="contenedor">
                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Inicio /</a>
                     </li>
                     <li>
-                        <p>Planea tus metas /</p>
+                        <a href="planea-tus-metas.html">Planea tus metas /</a>
+                    </li>
+                    <li>
+                        <p>¿En qué semana del proceso te encuentras?</p>
                     </li>
                 </ul>
             </div>
-            <div class="contenedor lg">
-                <div class="row">
-                    <div class="col">
-                        <div class="pill_title">
-                            <div class="pill_title_img">
-                                <img src="img/calendar.png">
-                            </div>
-                            <div class="pill_title_txt">
-                                <h1>Planea<br><span>tus metas</span></h1>
-                            </div>
-                        </div>
+            <div class="contenedor">
+                <div class="pill_title center">
+                    <div class="pill_title_img">
+                        <img src="img/list-pill.png">
                     </div>
-                    <div class="col">
-                        <a href="introduccion-a-la-aplicacion.html" class="module">
-                            <div class="module_img">
-                                <img src="img/modulos/6.png">
-                            </div>
-                            <div class="module_txt">
-                                <p>Introducción <br>a la aplicación</p>
-                            </div>
-                            <div class="module_hover">
-                                <span>Ver más</span>
-                            </div>
-                        </a>
-                        <a href="define-tus-objetivos.html" class="module">
-                            <div class="module_img">
-                                <img src="img/modulos/7.png">
-                            </div>
-                            <div class="module_txt">
-                                <p>Define tus <br>objetivos</p>
-                            </div>
-                            <div class="module_hover">
-                                <span>Ver más</span>
-                            </div>
-                        </a>
-                        <a href="semana-del-proceso.html" class="module">
-                            <div class="module_img">
-                                <img src="img/modulos/8.png">
-                            </div>
-                            <div class="module_txt">
-                                <p>¿En que semana <br>del proceso <br>te encuentras?</p>
-                            </div>
-                            <div class="module_hover">
-                                <span>Ver más</span>
-                            </div>
-                        </a>
+                    <div class="pill_title_txt">
+                        <h1>Configura<br><span>tu proceso</span></h1>
                     </div>
                 </div>
+            </div>
+            <div class="contenedor">
+                
+                <div class="grid">
+
+                    <div>
+                        <h2>Selecciona en qué semana estás empezando o retomando tu tratamiento</h2>
+                        <div class="custom-select">
+                            <select>
+                                <option value="1">Semana 1</option>
+                                <option value="2">Semana 2</option>
+                                <option value="3">Semana 3</option>
+                                <option value="4">Semana 4</option>
+                                <option value="5">Mantenimiento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>¿Cuántos días completos llevas de tratamiento en esta semana?</h2>
+                    </div>
+
+                    <div>
+                        <div class="obj_accord">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <h3><b>Activar</b> mensajes recordatorios</h3>
+                        </div>
+                        <button class="save center">Guardar</button>
+                    </div>
+
+                </div>
+
+                <a href="planea-tus-metas.html" class="back">
+                    <img src="img/back.png">
+                    <p>Volver atrás</p>
+                </a>
             </div>
         </section>
     </main>
